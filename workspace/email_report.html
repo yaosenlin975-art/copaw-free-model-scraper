@@ -1,0 +1,1258 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>免费模型汇总报告</title>
+        <style>
+            * { box-sizing: border-box; }
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+                line-height: 1.6;
+                color: #2d3748;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+            }
+            .container {
+                background: white;
+                border-radius: 16px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                overflow: hidden;
+            }
+            .header {
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                color: white;
+                padding: 40px;
+                text-align: center;
+            }
+            .header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                font-weight: 700;
+            }
+            .header .subtitle {
+                margin-top: 10px;
+                opacity: 0.8;
+                font-size: 1.1em;
+            }
+            .content {
+                padding: 40px;
+            }
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+            .stat-card {
+                background: linear-gradient(135deg, #f6f8fb 0%, #e9ecf2 100%);
+                border-radius: 12px;
+                padding: 24px;
+                text-align: center;
+                border: 1px solid #e2e8f0;
+            }
+            .stat-card .number {
+                font-size: 2.5em;
+                font-weight: 700;
+                color: #4a5568;
+            }
+            .stat-card .label {
+                color: #718096;
+                font-size: 0.9em;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .stat-card.nvidia .number { color: #76b900; }
+            .stat-card.openrouter .number { color: #27ae60; }
+            .stat-card.text .number { color: #3182ce; }
+            .stat-card.audio .number { color: #805ad5; }
+            .stat-card.image .number { color: #ed8936; }
+            .stat-card.video .number { color: #e53e3e; }
+            
+            .changes-section {
+                margin-bottom: 40px;
+            }
+            .change-box {
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .change-box h3 {
+                margin-top: 0;
+                margin-bottom: 12px;
+            }
+            .change-box ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .change-box.added {
+                background: #f0fff4;
+                border: 1px solid #9ae6b4;
+            }
+            .change-box.added h3 { color: #276749; }
+            .change-box.removed {
+                background: #fff5f5;
+                border: 1px solid #feb2b2;
+            }
+            .change-box.removed h3 { color: #c53030; }
+            .change-box.changed {
+                background: #fffaf0;
+                border: 1px solid #fbd38d;
+            }
+            .change-box.changed h3 { color: #c05621; }
+            
+            h2 {
+                color: #2d3748;
+                font-size: 1.5em;
+                margin-top: 0;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                font-size: 0.95em;
+            }
+            th, td {
+                padding: 14px 12px;
+                text-align: left;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            th {
+                background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+                color: white;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 0.85em;
+                letter-spacing: 0.5px;
+            }
+            tr:nth-child(even) {
+                background-color: #f7fafc;
+            }
+            tr:hover {
+                background-color: #edf2f7;
+            }
+            .source-nvidia { color: #76b900; font-weight: 600; }
+            .source-openrouter { color: #27ae60; font-weight: 600; }
+            a {
+                color: #4299e1;
+                text-decoration: none;
+                font-weight: 500;
+            }
+            a:hover {
+                color: #2b6cb0;
+                text-decoration: underline;
+            }
+            .modality-badge {
+                display: inline-block;
+                padding: 4px 10px;
+                border-radius: 20px;
+                font-size: 0.85em;
+                font-weight: 500;
+            }
+            .modality-text { background: #ebf8ff; color: #2b6cb0; }
+            .modality-audio { background: #faf5ff; color: #6b46c1; }
+            .modality-image { background: #fffaf0; color: #c05621; }
+            .modality-video { background: #fff5f5; color: #c53030; }
+            
+            .section {
+                margin-bottom: 40px;
+            }
+            .footer {
+                text-align: center;
+                padding: 30px;
+                background: #f7fafc;
+                color: #718096;
+                font-size: 0.9em;
+                border-top: 1px solid #e2e8f0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>🤖 免费 AI 模型汇总报告</h1>
+                <div class="subtitle">生成时间: 2026-04-09 15:07:57</div>
+            </div>
+            
+            <div class="content">
+                <!-- 统计卡片 -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="number">124</div>
+                        <div class="label">总计模型</div>
+                    </div>
+                    <div class="stat-card nvidia">
+                        <div class="number">96</div>
+                        <div class="label">NVIDIA</div>
+                    </div>
+                    <div class="stat-card openrouter">
+                        <div class="number">28</div>
+                        <div class="label">OpenRouter</div>
+                    </div>
+                    <div class="stat-card text">
+                        <div class="number">99</div>
+                        <div class="label">文本模型</div>
+                    </div>
+                    <div class="stat-card audio">
+                        <div class="number">11</div>
+                        <div class="label">音频模型</div>
+                    </div>
+                    <div class="stat-card image">
+                        <div class="number">26</div>
+                        <div class="label">图像模型</div>
+                    </div>
+                    <div class="stat-card video">
+                        <div class="number">6</div>
+                        <div class="label">视频模型</div>
+                    </div>
+                </div>
+                
+                
+        <div class="changes-section">
+            <h2>📊 模型变更报告</h2>
+            <p>✅ 与上次相比无变化</p>
+        </div>
+        
+                
+                <!-- NVIDIA 模型 -->
+                <div class="section">
+                    <h2>🟢 NVIDIA 免费模型 (96)</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>模型名称</th>
+                                <th>参数大小</th>
+                                <th>上下文长度</th>
+                                <th>用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td><a href="https://build.nvidia.com/google/gemma-4-31b-it" target="_blank">gemma-4-31b-it</a></td>
+            
+            <td>31B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-nemotron-rerank-vl-1b-v2" target="_blank">llama-nemotron-rerank-vl-1b-v2</a></td>
+            
+            <td>1b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/protein-binder-design-for-drug-discovery" target="_blank">Build A Generative Protein Binder Design Pipeline</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/mistral-small-4-119b-2603" target="_blank">mistral-small-4-119b-2603</a></td>
+            
+            <td>119b</td>
+            <td>256k context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-voicechat" target="_blank">nemotron-voicechat</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio, text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-asr-streaming" target="_blank">nemotron-asr-streaming</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/black-forest-labs/flux_2-klein-4b" target="_blank">flux.2-klein-4b</a></td>
+            
+            <td>4B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-ocr-v1" target="_blank">nemotron-ocr-v1</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-super-120b-a12b" target="_blank">nemotron-3-super-120b-a12b</a></td>
+            
+            <td>1M</td>
+            <td>1M context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-nemotron-rerank-1b-v2" target="_blank">llama-nemotron-rerank-1b-v2</a></td>
+            
+            <td>1b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/qwen/qwen3.5-122b-a10b" target="_blank">qwen3.5-122b-a10b</a></td>
+            
+            <td>122B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-table-structure-v1" target="_blank">nemotron-table-structure-v1</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-page-elements-v3" target="_blank">nemotron-page-elements-v3</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-graphic-elements-v1" target="_blank">nemotron-graphic-elements-v1</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-nemotron-embed-1b-v2" target="_blank">llama-nemotron-embed-1b-v2</a></td>
+            
+            <td>1b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/gliner-pii" target="_blank">gliner-pii</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/minimaxai/minimax-m2.5" target="_blank">minimax-m2.5</a></td>
+            
+            <td>230B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/cosmos-transfer2_5-2b" target="_blank">cosmos-transfer2.5-2b</a></td>
+            
+            <td>2b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-video">video</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/qwen/qwen3.5-397b-a17b" target="_blank">qwen3.5-397b-a17b</a></td>
+            
+            <td>400B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/z-ai/glm5" target="_blank">glm-5</a></td>
+            
+            <td>744B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-nemotron-embed-vl-1b-v2" target="_blank">llama-nemotron-embed-vl-1b-v2</a></td>
+            
+            <td>1b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/stepfun-ai/step-3.5-flash" target="_blank">step-3.5-flash</a></td>
+            
+            <td>200B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/moonshotai/kimi-k2.5" target="_blank">kimi-k2.5</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, video</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/z-ai/glm4_7" target="_blank">glm-4.7</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-content-safety-reasoning-4b" target="_blank">nemotron-content-safety-reasoning-4b</a></td>
+            
+            <td>4b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/cosmos-reason2-8b" target="_blank">cosmos-reason2-8b</a></td>
+            
+            <td>8b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, video, text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemoretriever-page-elements-v3" target="_blank">nemoretriever-page-elements-v3</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/deepseek-ai/deepseek-v3_2" target="_blank">deepseek-v3.2</a></td>
+            
+            <td>685B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-nano-30b-a3b" target="_blank">nemotron-3-nano-30b-a3b</a></td>
+            
+            <td>1M</td>
+            <td>1M context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/riva-translate-4b-instruct-v1_1" target="_blank">riva-translate-4b-instruct-v1_1</a></td>
+            
+            <td>4b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/devstral-2-123b-instruct-2512" target="_blank">devstral-2-123b-instruct-2512</a></td>
+            
+            <td>123b</td>
+            <td>256k context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/moonshotai/kimi-k2-thinking" target="_blank">kimi-k2-thinking</a></td>
+            
+            <td>Unknown</td>
+            <td>256K context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/mistral-large-3-675b-instruct-2512" target="_blank">mistral-large-3-675b-instruct-2512</a></td>
+            
+            <td>675b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/ministral-14b-instruct-2512" target="_blank">ministral-14b-instruct-2512</a></td>
+            
+            <td>14b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/streampetr" target="_blank">streampetr</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-parse" target="_blank">nemotron-parse</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-nano-12b-v2-vl" target="_blank">nemotron-nano-12b-v2-vl</a></td>
+            
+            <td>12B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, video</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3.1-nemotron-safety-guard-8b-v3" target="_blank">llama-3.1-nemotron-safety-guard-8b-v3</a></td>
+            
+            <td>8b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-nano-8b" target="_blank">nemotron-3-nano-8b</a></td>
+            
+            <td>1M</td>
+            <td>1M context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-nano-4b" target="_blank">nemotron-3-nano-4b</a></td>
+            
+            <td>1M</td>
+            <td>1M context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-nano-2b" target="_blank">nemotron-3-nano-2b</a></td>
+            
+            <td>1M</td>
+            <td>1M context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-nano-1b" target="_blank">nemotron-3-nano-1b</a></td>
+            
+            <td>1M</td>
+            <td>1M context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3.3-nemotron-super-49b-v1_5" target="_blank">llama-3.3-nemotron-super-49b-v1.5</a></td>
+            
+            <td>49B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3.1-nemotron-70b-instruct-hf" target="_blank">llama-3.1-nemotron-70b-instruct-hf</a></td>
+            
+            <td>70B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3.1-nemotron-70b-instruct" target="_blank">llama-3.1-nemotron-70b-instruct</a></td>
+            
+            <td>70B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-4-340b-instruct" target="_blank">nemotron-4-340b-instruct</a></td>
+            
+            <td>340B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-405b-instruct" target="_blank">nemotron-3-405b-instruct</a></td>
+            
+            <td>405B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemotron-3-70b-instruct" target="_blank">nemotron-3-70b-instruct</a></td>
+            
+            <td>70B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/parakeet-ctc-0_6b-es" target="_blank">parakeet-ctc-0.6b-es</a></td>
+            
+            <td>0.6b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/parakeet-ctc-0_6b-vi" target="_blank">parakeet-ctc-0.6b-vi</a></td>
+            
+            <td>0.6b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/bytedance/seed-oss-36b-instruct" target="_blank">seed-oss-36b-instruct</a></td>
+            
+            <td>36b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/microsoft/trellis" target="_blank">TRELLIS</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/qwen/qwen3-coder-480b-a35b-instruct" target="_blank">qwen3-coder-480b-a35b-instruct</a></td>
+            
+            <td>480b</td>
+            <td>256K context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/deepseek-ai/deepseek-v3_1" target="_blank">deepseek-v3.1</a></td>
+            
+            <td>Unknown</td>
+            <td>128K context</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nvidia-nemotron-nano-9b-v2" target="_blank">nvidia-nemotron-nano-9b-v2</a></td>
+            
+            <td>9b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/stabilityai/stable-diffusion-3_5-large" target="_blank">stable-diffusion-3.5-large</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/black-forest-labs/flux_1-kontext-dev" target="_blank">FLUX.1-Kontext-dev</a></td>
+            
+            <td>Unknown</td>
+            <td>1 K</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemoretriever-ocr-v1" target="_blank">nemoretriever-ocr-v1</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/openai/gpt-oss-20b" target="_blank">gpt-oss-20b</a></td>
+            
+            <td>20b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/openai/gpt-oss-120b" target="_blank">gpt-oss-120b</a></td>
+            
+            <td>120b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/parakeet-tdt-0_6b-v2" target="_blank">parakeet-tdt-0.6b-v2</a></td>
+            
+            <td>0.6b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3_3-nemotron-super-49b-v1_5" target="_blank">llama-3.3-nemotron-super-49b-v1.5</a></td>
+            
+            <td>49b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/opengpt-x/teuken-7b-instruct-commercial-v0_4" target="_blank">teuken-7b-instruct-commercial-v0.4</a></td>
+            
+            <td>7B</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/sarvamai/sarvam-m" target="_blank">sarvam-m</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3_2-nemoretriever-300m-embed-v1" target="_blank">llama-3_2-nemoretriever-300m-embed-v1</a></td>
+            
+            <td>300m</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/nemoretriever-ocr" target="_blank">nemoretriever-ocr</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/microsoft/phi-4-mini-flash-reasoning" target="_blank">phi-4-mini-flash-reasoning</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/moonshotai/kimi-k2-instruct" target="_blank">kimi-k2-instruct</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/magistral-small-2506" target="_blank">magistral-small-2506</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/magpie-tts-flow" target="_blank">magpie-tts-flow</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/meta/llama-guard-4-12b" target="_blank">llama-guard-4-12b</a></td>
+            
+            <td>12b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/riva-translate-1_6b" target="_blank">riva-translate-1.6b</a></td>
+            
+            <td>1.6b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/google/gemma-3n-e4b-it" target="_blank">gemma-3n-e4b-it</a></td>
+            
+            <td>4b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio, image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/google/gemma-3n-e2b-it" target="_blank">gemma-3n-e2b-it</a></td>
+            
+            <td>2b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio, image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3_2-nemoretriever-500m-rerank-v2" target="_blank">llama-3.2-nemoretriever-500m-rerank-v2</a></td>
+            
+            <td>500m</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/cosmos-transfer1-7b" target="_blank">cosmos-transfer1-7b</a></td>
+            
+            <td>7b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-video">video</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/bnr" target="_blank">Background Noise Removal</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3_2-nemoretriever-1b-vlm-embed-v1" target="_blank">llama-3.2-nemoretriever-1b-vlm-embed-v1</a></td>
+            
+            <td>1b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/mistral-nemotron" target="_blank">mistral-nemotron</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mit/boltz2" target="_blank">Boltz-2</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3.1-nemotron-nano-vl-8b-v1" target="_blank">llama-3.1-nemotron-nano-vl-8b-v1</a></td>
+            
+            <td>8b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-nano-4b-v1_1" target="_blank">llama-3.1-nemotron-nano-4b-v1.1</a></td>
+            
+            <td>4b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/marin/marin-8b-instruct" target="_blank">marin-8b-instruct</a></td>
+            
+            <td>8b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/magpie-tts-zeroshot" target="_blank">magpie-tts-zeroshot</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/ibm/granite-3_3-8b-instruct" target="_blank">granite-3.3-8b-instruct</a></td>
+            
+            <td>8b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/black-forest-labs/flux_1-schnell" target="_blank">FLUX.1-schnell</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/utter-project/eurollm-9b-instruct" target="_blank">eurollm-9b-instruct</a></td>
+            
+            <td>9b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/gotocompany/gemma-2-9b-cpt-sahabatai-instruct" target="_blank">gemma-2-9b-cpt-sahabatai-instruct</a></td>
+            
+            <td>9b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/mistral-small-3_1-24b-instruct-2503" target="_blank">mistral-small-3.1-24b-instruct-2503</a></td>
+            
+            <td>24b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/mistralai/mistral-medium-3-instruct" target="_blank">mistral-medium-3-instruct</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/parakeet-1_1b-rnnt-multilingual-asr" target="_blank">parakeet-1.1b-rnnt-multilingual-asr</a></td>
+            
+            <td>1.1b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-audio">audio</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/black-forest-labs/flux_1-dev" target="_blank">FLUX.1-dev</a></td>
+            
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-image">image</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-ultra-253b-v1" target="_blank">llama-3.1-nemotron-ultra-253b-v1</a></td>
+            
+            <td>253b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/meta/llama-4-maverick-17b-128e-instruct" target="_blank">llama-4-maverick-17b-128e-instruct</a></td>
+            
+            <td>17B parameters</td>
+            <td>128 M</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/meta/llama-4-scout-17b-16e-instruct" target="_blank">llama-4-scout-17b-16e-instruct</a></td>
+            
+            <td>17B parameters</td>
+            <td>16 M</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://build.nvidia.com/qwen/qwq-32b" target="_blank">qwq-32b</a></td>
+            
+            <td>32b</td>
+            <td>Unknown</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- OpenRouter 模型 -->
+                <div class="section">
+                    <h2>🟩 OpenRouter 免费模型 (28)</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>模型名称</th>
+                                <th>参数大小</th>
+                                <th>上下文长度</th>
+                                <th>用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>Google: Gemma 4 26B A4B  (free)</td>
+            
+            <td>26b</td>
+            <td>262K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Gemma 4 31B (free)</td>
+            
+            <td>31b</td>
+            <td>262K</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Lyria 3 Pro Preview</td>
+            
+            <td>Unknown</td>
+            <td>1.0M</td>
+            <td><span class="modality-badge modality-audio">audio</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Lyria 3 Clip Preview</td>
+            
+            <td>Unknown</td>
+            <td>1.0M</td>
+            <td><span class="modality-badge modality-audio">audio, image</span></td>
+        </tr>
+        
+        <tr>
+            <td>NVIDIA: Nemotron 3 Super (free)</td>
+            
+            <td>120b</td>
+            <td>262K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>MiniMax: MiniMax M2.5 (free)</td>
+            
+            <td>2.5 b</td>
+            <td>197K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Free Models Router</td>
+            
+            <td>Unknown</td>
+            <td>200K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Arcee AI: Trinity Large Preview (free)</td>
+            
+            <td>400B</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>LiquidAI: LFM2.5-1.2B-Thinking (free)</td>
+            
+            <td>1.2b</td>
+            <td>33K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>LiquidAI: LFM2.5-1.2B-Instruct (free)</td>
+            
+            <td>1.2b</td>
+            <td>33K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>NVIDIA: Nemotron 3 Nano 30B A3B (free)</td>
+            
+            <td>30b</td>
+            <td>256K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Arcee AI: Trinity Mini (free)</td>
+            
+            <td>26B</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>NVIDIA: Nemotron Nano 12B 2 VL (free)</td>
+            
+            <td>12b</td>
+            <td>128K</td>
+            <td><span class="modality-badge modality-video">video, text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Qwen: Qwen3 Next 80B A3B Instruct (free)</td>
+            
+            <td>80b</td>
+            <td>262K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>NVIDIA: Nemotron Nano 9B V2 (free)</td>
+            
+            <td>9b</td>
+            <td>128K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>OpenAI: gpt-oss-120b (free)</td>
+            
+            <td>120b</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>OpenAI: gpt-oss-20b (free)</td>
+            
+            <td>20b</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Z.ai: GLM 4.5 Air (free)</td>
+            
+            <td>Unknown</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Qwen: Qwen3 Coder 480B A35B (free)</td>
+            
+            <td>480B</td>
+            <td>262K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Venice: Uncensored (free)</td>
+            
+            <td>24b</td>
+            <td>33K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Gemma 3n 2B (free)</td>
+            
+            <td>2b</td>
+            <td>8K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Gemma 3n 4B (free)</td>
+            
+            <td>4b</td>
+            <td>8K</td>
+            <td><span class="modality-badge modality-audio">audio, image</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Gemma 3 4B (free)</td>
+            
+            <td>4b</td>
+            <td>33K</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Gemma 3 12B (free)</td>
+            
+            <td>12b</td>
+            <td>33K</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Google: Gemma 3 27B (free)</td>
+            
+            <td>27b</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-image">image, text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Meta: Llama 3.3 70B Instruct (free)</td>
+            
+            <td>70b</td>
+            <td>66K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Meta: Llama 3.2 3B Instruct (free)</td>
+            
+            <td>3b</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+        <tr>
+            <td>Nous: Hermes 3 405B Instruct (free)</td>
+            
+            <td>405b</td>
+            <td>131K</td>
+            <td><span class="modality-badge modality-text">text</span></td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>此邮件由 Forge 自动发送 | 数据来源: NVIDIA API Catalog & OpenRouter</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,1412 @@
+[
+  {
+    "name": "gemma-4-31b-it",
+    "description": "Dense 31B model delivering frontier reasoning for coding, agentic workflows, and fine-tuning.",
+    "link": "https://build.nvidia.com/google/gemma-4-31b-it",
+    "parameters": "31B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-nemotron-rerank-vl-1b-v2",
+    "description": "GPU-accelerated model optimized for providing a probability score that a given passage contains the information to answer a question.",
+    "link": "https://build.nvidia.com/nvidia/llama-nemotron-rerank-vl-1b-v2",
+    "parameters": "1b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "Build A Generative Protein Binder Design Pipeline",
+    "description": "This blueprint shows how generative AI and accelerated NIM microservices can design protein binders smarter and faster.",
+    "link": "https://build.nvidia.com/nvidia/protein-binder-design-for-drug-discovery",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "mistral-small-4-119b-2603",
+    "description": "Hybrid MoE model unifying instruct, reasoning, and coding with multimodal input and 256k context",
+    "link": "https://build.nvidia.com/mistralai/mistral-small-4-119b-2603",
+    "parameters": "119b",
+    "context_length": "256k context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-voicechat",
+    "description": "Nemotron 3 Voicechat",
+    "link": "https://build.nvidia.com/nvidia/nemotron-voicechat",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio",
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-asr-streaming",
+    "description": "Real-time speech recognition for English",
+    "link": "https://build.nvidia.com/nvidia/nemotron-asr-streaming",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio"
+    ]
+  },
+  {
+    "name": "flux.2-klein-4b",
+    "description": "FLUX.2-klein-4B is a distilled image generation and editing model, producing outputs at lighting speed",
+    "link": "https://build.nvidia.com/black-forest-labs/flux_2-klein-4b",
+    "parameters": "4B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "nemotron-ocr-v1",
+    "description": "Powerful OCR model for fast, accurate real-world image text extraction, layout, and structure analysis.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-ocr-v1",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "nemotron-3-super-120b-a12b",
+    "description": "Open, efficient hybrid Mamba-Transformer MoE with 1M context, excelling in agentic reasoning, coding, planning, tool calling, and more",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-super-120b-a12b",
+    "parameters": "1M",
+    "context_length": "1M context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-nemotron-rerank-1b-v2",
+    "description": "GPU-accelerated model optimized for providing a probability score that a given passage contains the information to answer a question.",
+    "link": "https://build.nvidia.com/nvidia/llama-nemotron-rerank-1b-v2",
+    "parameters": "1b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "qwen3.5-122b-a10b",
+    "description": "122B MoE LLM (10B active) for coding, reasoning, multimodal chat. Agent-ready.",
+    "link": "https://build.nvidia.com/qwen/qwen3.5-122b-a10b",
+    "parameters": "122B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-table-structure-v1",
+    "description": "Model for object detection, fine-tuned to detect charts, tables, and titles in documents.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-table-structure-v1",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-page-elements-v3",
+    "description": "Model for object detection, fine-tuned to detect charts, tables, and titles in documents.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-page-elements-v3",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-graphic-elements-v1",
+    "description": "Model for object detection, fine-tuned to detect charts, tables, and titles in documents.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-graphic-elements-v1",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-nemotron-embed-1b-v2",
+    "description": "Multilingual, cross-lingual embedding model for long-document QA retrieval, supporting 26 languages.",
+    "link": "https://build.nvidia.com/nvidia/llama-nemotron-embed-1b-v2",
+    "parameters": "1b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "gliner-pii",
+    "description": "GLiNER PII detects Personally Identifiable Information in text.",
+    "link": "https://build.nvidia.com/nvidia/gliner-pii",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "minimax-m2.5",
+    "description": "MiniMax M2.5 is a 230B-parameter text-to-text AI model excelling in coding, reasoning, and office tasks.",
+    "link": "https://build.nvidia.com/minimaxai/minimax-m2.5",
+    "parameters": "230B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "cosmos-transfer2.5-2b",
+    "description": "Generates physics-aware video world states for physical AI development using text prompts and multiple spatial control inputs derived from real-world data or simulation.",
+    "link": "https://build.nvidia.com/nvidia/cosmos-transfer2_5-2b",
+    "parameters": "2b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "video"
+    ]
+  },
+  {
+    "name": "qwen3.5-397b-a17b",
+    "description": "Next-gen Qwen 3.5 VLM (400B MoE) brings advanced vision, chat, RAG, and agentic capabilities.",
+    "link": "https://build.nvidia.com/qwen/qwen3.5-397b-a17b",
+    "parameters": "400B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "name": "glm-5",
+    "description": "GLM-5 744B MoE enables efficient reasoning for complex systems and long-horizon agentic tasks.",
+    "link": "https://build.nvidia.com/z-ai/glm5",
+    "parameters": "744B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-nemotron-embed-vl-1b-v2",
+    "description": "Multimodal question-answer retrieval representing user queries as text and documents as images.",
+    "link": "https://build.nvidia.com/nvidia/llama-nemotron-embed-vl-1b-v2",
+    "parameters": "1b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "name": "step-3.5-flash",
+    "description": "200B open-source reasoning engine with sparse MoE powering frontier agentic AI.",
+    "link": "https://build.nvidia.com/stepfun-ai/step-3.5-flash",
+    "parameters": "200B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "kimi-k2.5",
+    "description": "1T multimodal MoE for high‑capacity video and image understanding with efficient inference.",
+    "link": "https://build.nvidia.com/moonshotai/kimi-k2.5",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "video"
+    ]
+  },
+  {
+    "name": "glm-4.7",
+    "description": "GLM-4.7 is a multilingual agentic coding partner with stronger reasoning, tool use, and UI skills.",
+    "link": "https://build.nvidia.com/z-ai/glm4_7",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-content-safety-reasoning-4b",
+    "description": "A context‑aware safety model that applies reasoning to enforce domain‑specific policies.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-content-safety-reasoning-4b",
+    "parameters": "4b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "cosmos-reason2-8b",
+    "description": "Vision language model that excels in understanding the physical world using structured reasoning on videos or images.",
+    "link": "https://build.nvidia.com/nvidia/cosmos-reason2-8b",
+    "parameters": "8b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "video",
+      "text"
+    ]
+  },
+  {
+    "name": "nemoretriever-page-elements-v3",
+    "description": "Model for object detection, fine-tuned to detect charts, tables, and titles in documents.",
+    "link": "https://build.nvidia.com/nvidia/nemoretriever-page-elements-v3",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "deepseek-v3.2",
+    "description": "State-of-the-art 685B reasoning LLM with sparse attention, long context, and integrated agentic tools.",
+    "link": "https://build.nvidia.com/deepseek-ai/deepseek-v3_2",
+    "parameters": "685B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-nano-30b-a3b",
+    "description": "Open, efficient MoE model with 1M context, excelling in coding, reasoning, instruction following, tool calling, and more",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-nano-30b-a3b",
+    "parameters": "1M",
+    "context_length": "1M context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "riva-translate-4b-instruct-v1_1",
+    "description": "Translation model in 12 languages with few-shots example prompts capability.",
+    "link": "https://build.nvidia.com/nvidia/riva-translate-4b-instruct-v1_1",
+    "parameters": "4b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "devstral-2-123b-instruct-2512",
+    "description": "State-of-the-art open code model with deep reasoning, 256k context, and unmatched efficiency.",
+    "link": "https://build.nvidia.com/mistralai/devstral-2-123b-instruct-2512",
+    "parameters": "123b",
+    "context_length": "256k context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "kimi-k2-thinking",
+    "description": "Open reasoning model with 256K context window, native INT4 quantization and enhanced tool use.",
+    "link": "https://build.nvidia.com/moonshotai/kimi-k2-thinking",
+    "parameters": "Unknown",
+    "context_length": "256K context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "mistral-large-3-675b-instruct-2512",
+    "description": "A state-of-the-art general purpose MoE VLM ideal for chat, agentic and instruction based use cases.",
+    "link": "https://build.nvidia.com/mistralai/mistral-large-3-675b-instruct-2512",
+    "parameters": "675b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "ministral-14b-instruct-2512",
+    "description": "A general purpose VLM ideal for chat and instruction based use cases",
+    "link": "https://build.nvidia.com/mistralai/ministral-14b-instruct-2512",
+    "parameters": "14b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "streampetr",
+    "description": "StreamPETR offers efficient 3D object detection for autonomous driving by propagating sparse object queries temporally.",
+    "link": "https://build.nvidia.com/nvidia/streampetr",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-parse",
+    "description": "Cutting-edge vision-language model exceling in retrieving text and metadata from images.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-parse",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "nemotron-nano-12b-v2-vl",
+    "description": "Nemotron Nano 12B v2 VL enables multi-image and video understanding, along with visual Q&A and summarization capabilities.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-nano-12b-v2-vl",
+    "parameters": "12B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "video"
+    ]
+  },
+  {
+    "name": "llama-3.1-nemotron-safety-guard-8b-v3",
+    "description": "Leading multilingual content safety model for detecting and classifying harmful content.",
+    "link": "https://build.nvidia.com/nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+    "parameters": "8b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-nano-8b",
+    "description": "Open, efficient model with 1M context, excelling in coding, reasoning, instruction following, tool calling, and more",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-nano-8b",
+    "parameters": "1M",
+    "context_length": "1M context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-nano-4b",
+    "description": "Open, efficient model with 1M context, excelling in coding, reasoning, instruction following, tool calling, and more",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-nano-4b",
+    "parameters": "1M",
+    "context_length": "1M context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-nano-2b",
+    "description": "Open, efficient model with 1M context, excelling in coding, reasoning, instruction following, tool calling, and more",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-nano-2b",
+    "parameters": "1M",
+    "context_length": "1M context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-nano-1b",
+    "description": "Open, efficient model with 1M context, excelling in coding, reasoning, instruction following, tool calling, and more",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-nano-1b",
+    "parameters": "1M",
+    "context_length": "1M context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-3.3-nemotron-super-49b-v1.5",
+    "description": "A 49B parameter model designed to provide high-quality responses for a wide range of conversational and instruction-following tasks.",
+    "link": "https://build.nvidia.com/nvidia/llama-3.3-nemotron-super-49b-v1_5",
+    "parameters": "49B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-3.1-nemotron-70b-instruct-hf",
+    "description": "Llama-3.1-Nemotron-70B-Instruct-HF is a 70B parameter model fine-tuned to provide high-quality responses.",
+    "link": "https://build.nvidia.com/nvidia/llama-3.1-nemotron-70b-instruct-hf",
+    "parameters": "70B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-3.1-nemotron-70b-instruct",
+    "description": "Llama-3.1-Nemotron-70B-Instruct is a 70B parameter model fine-tuned to provide high-quality responses.",
+    "link": "https://build.nvidia.com/nvidia/llama-3.1-nemotron-70b-instruct",
+    "parameters": "70B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-4-340b-instruct",
+    "description": "A 340B parameter model fine-tuned to provide high-quality responses for a wide range of conversational and instruction-following tasks.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-4-340b-instruct",
+    "parameters": "340B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-405b-instruct",
+    "description": "A 405B parameter model fine-tuned to provide high-quality responses for a wide range of conversational and instruction-following tasks.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-405b-instruct",
+    "parameters": "405B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemotron-3-70b-instruct",
+    "description": "A 70B parameter model fine-tuned to provide high-quality responses for a wide range of conversational and instruction-following tasks.",
+    "link": "https://build.nvidia.com/nvidia/nemotron-3-70b-instruct",
+    "parameters": "70B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "parakeet-ctc-0.6b-es",
+    "description": "Accurate and optimized Spanish English transcriptions with punctuation and word timestamps.",
+    "link": "https://build.nvidia.com/nvidia/parakeet-ctc-0_6b-es",
+    "parameters": "0.6b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "parakeet-ctc-0.6b-vi",
+    "description": "Accurate and optimized Vietnamese-English transcriptions with punctuation and word timestamps.",
+    "link": "https://build.nvidia.com/nvidia/parakeet-ctc-0_6b-vi",
+    "parameters": "0.6b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "seed-oss-36b-instruct",
+    "description": "ByteDance open-source LLM with long-context, reasoning, and agentic intelligence.",
+    "link": "https://build.nvidia.com/bytedance/seed-oss-36b-instruct",
+    "parameters": "36b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "TRELLIS",
+    "description": "MSFT TRELLIS is a 3D AI model that generates high-quality 3D assets from text or image inputs.",
+    "link": "https://build.nvidia.com/microsoft/trellis",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "qwen3-coder-480b-a35b-instruct",
+    "description": "Excels in agentic coding and browser use and supports 256K context, delivering top results.",
+    "link": "https://build.nvidia.com/qwen/qwen3-coder-480b-a35b-instruct",
+    "parameters": "480b",
+    "context_length": "256K context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "deepseek-v3.1",
+    "description": "DeepSeek V3.1 Instruct is a hybrid AI model with fast reasoning, 128K context, and strong tool use.",
+    "link": "https://build.nvidia.com/deepseek-ai/deepseek-v3_1",
+    "parameters": "Unknown",
+    "context_length": "128K context",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nvidia-nemotron-nano-9b-v2",
+    "description": "High‑efficiency LLM with hybrid Transformer‑Mamba design, excelling in reasoning and agentic tasks.",
+    "link": "https://build.nvidia.com/nvidia/nvidia-nemotron-nano-9b-v2",
+    "parameters": "9b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "stable-diffusion-3.5-large",
+    "description": "Stable Diffusion 3.5 is a popular text-to-image generation model",
+    "link": "https://build.nvidia.com/stabilityai/stable-diffusion-3_5-large",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "FLUX.1-Kontext-dev",
+    "description": "FLUX.1 Kontext is a multimodal model that enables in-context image generation and editing.",
+    "link": "https://build.nvidia.com/black-forest-labs/flux_1-kontext-dev",
+    "parameters": "Unknown",
+    "context_length": "1 K",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "nemoretriever-ocr-v1",
+    "description": "Powerful OCR model for fast, accurate real-world image text extraction, layout, and structure analysis.",
+    "link": "https://build.nvidia.com/nvidia/nemoretriever-ocr-v1",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "gpt-oss-20b",
+    "description": "Smaller Mixture of Experts (MoE) text-only LLM for efficient AI reasoning and math",
+    "link": "https://build.nvidia.com/openai/gpt-oss-20b",
+    "parameters": "20b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "gpt-oss-120b",
+    "description": "Mixture of Experts (MoE) reasoning LLM (text-only) designed to fit within 80GB GPU.",
+    "link": "https://build.nvidia.com/openai/gpt-oss-120b",
+    "parameters": "120b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "parakeet-tdt-0.6b-v2",
+    "description": "Accurate and optimized English transcriptions with punctuation and word timestamps",
+    "link": "https://build.nvidia.com/nvidia/parakeet-tdt-0_6b-v2",
+    "parameters": "0.6b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-3.3-nemotron-super-49b-v1.5",
+    "description": "High efficiency model with leading accuracy for reasoning, tool calling, chat, and instruction following.",
+    "link": "https://build.nvidia.com/nvidia/llama-3_3-nemotron-super-49b-v1_5",
+    "parameters": "49b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "teuken-7b-instruct-commercial-v0.4",
+    "description": "Multilingual 7B LLM, instruction-tuned on all 24 EU languages for stable, culturally aligned output.",
+    "link": "https://build.nvidia.com/opengpt-x/teuken-7b-instruct-commercial-v0_4",
+    "parameters": "7B",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "sarvam-m",
+    "description": "Multilingual, hybrid-reasoning model optimized for Indian language tasks, programming, mathematical reasoning capabilities.",
+    "link": "https://build.nvidia.com/sarvamai/sarvam-m",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-3_2-nemoretriever-300m-embed-v1",
+    "description": "Multilingual, cross-lingual embedding model for long-document QA retrieval, supporting 26 languages.",
+    "link": "https://build.nvidia.com/nvidia/llama-3_2-nemoretriever-300m-embed-v1",
+    "parameters": "300m",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "nemoretriever-ocr",
+    "description": "Powerful OCR model for fast, accurate real-world image text extraction, layout, and structure analysis.",
+    "link": "https://build.nvidia.com/nvidia/nemoretriever-ocr",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "phi-4-mini-flash-reasoning",
+    "description": "Lightweight reasoning model for applications in latency bound, memory/compute constrained environments",
+    "link": "https://build.nvidia.com/microsoft/phi-4-mini-flash-reasoning",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "kimi-k2-instruct",
+    "description": "State-of-the-art open mixture-of-experts model with strong reasoning, coding, and agentic capabilities",
+    "link": "https://build.nvidia.com/moonshotai/kimi-k2-instruct",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "magistral-small-2506",
+    "description": "High performance reasoning model optimized for efficiency and edge deployment",
+    "link": "https://build.nvidia.com/mistralai/magistral-small-2506",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "magpie-tts-flow",
+    "description": "Expressive and engaging text-to-speech, generated from a short audio sample.",
+    "link": "https://build.nvidia.com/nvidia/magpie-tts-flow",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio"
+    ]
+  },
+  {
+    "name": "llama-guard-4-12b",
+    "description": "Multi-modal model to classify safety for input prompts as well output responses.",
+    "link": "https://build.nvidia.com/meta/llama-guard-4-12b",
+    "parameters": "12b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "riva-translate-1.6b",
+    "description": "Enable smooth global interactions in 36 languages.",
+    "link": "https://build.nvidia.com/nvidia/riva-translate-1_6b",
+    "parameters": "1.6b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "gemma-3n-e4b-it",
+    "description": "An edge computing AI model which accepts text, audio and image input, ideal for resource-constrained environments",
+    "link": "https://build.nvidia.com/google/gemma-3n-e4b-it",
+    "parameters": "4b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio",
+      "image"
+    ]
+  },
+  {
+    "name": "gemma-3n-e2b-it",
+    "description": "An edge computing AI model which accepts text, audio and image input, ideal for resource-constrained environments",
+    "link": "https://build.nvidia.com/google/gemma-3n-e2b-it",
+    "parameters": "2b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio",
+      "image"
+    ]
+  },
+  {
+    "name": "llama-3.2-nemoretriever-500m-rerank-v2",
+    "description": "GPU-accelerated model optimized for providing a probability score that a given passage contains the information to answer a question.",
+    "link": "https://build.nvidia.com/nvidia/llama-3_2-nemoretriever-500m-rerank-v2",
+    "parameters": "500m",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "cosmos-transfer1-7b",
+    "description": "Generates physics-aware video world states for physical AI development using text prompts and multiple spatial control inputs derived from real-world data or simulation.",
+    "link": "https://build.nvidia.com/nvidia/cosmos-transfer1-7b",
+    "parameters": "7b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "video"
+    ]
+  },
+  {
+    "name": "Background Noise Removal",
+    "description": "Removes unwanted noises from audio improving speech intelligibility.",
+    "link": "https://build.nvidia.com/nvidia/bnr",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio"
+    ]
+  },
+  {
+    "name": "llama-3.2-nemoretriever-1b-vlm-embed-v1",
+    "description": "Multimodal question-answer retrieval representing user queries as text and documents as images.",
+    "link": "https://build.nvidia.com/nvidia/llama-3_2-nemoretriever-1b-vlm-embed-v1",
+    "parameters": "1b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "name": "mistral-nemotron",
+    "description": "Built for agentic workflows, this model excels in coding, instruction following, and function calling",
+    "link": "https://build.nvidia.com/mistralai/mistral-nemotron",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "Boltz-2",
+    "description": "Predict complex structures using Boltz-2.",
+    "link": "https://build.nvidia.com/mit/boltz2",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-3.1-nemotron-nano-vl-8b-v1",
+    "description": "Multi-modal vision-language model that understands text/img and creates informative responses",
+    "link": "https://build.nvidia.com/nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+    "parameters": "8b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "llama-3.1-nemotron-nano-4b-v1.1",
+    "description": "State-of-the-art open model for reasoning, code, math, and tool calling - suitable for edge agents",
+    "link": "https://build.nvidia.com/nvidia/llama-3_1-nemotron-nano-4b-v1_1",
+    "parameters": "4b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "marin-8b-instruct",
+    "description": "State-of-the-art open model trained on open datasets, excelling in reasoning, math, and science.",
+    "link": "https://build.nvidia.com/marin/marin-8b-instruct",
+    "parameters": "8b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "magpie-tts-zeroshot",
+    "description": "Expressive and engaging text-to-speech, generated from a short audio sample.",
+    "link": "https://build.nvidia.com/nvidia/magpie-tts-zeroshot",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio"
+    ]
+  },
+  {
+    "name": "granite-3.3-8b-instruct",
+    "description": "Small language model fine-tuned for improved reasoning, coding, and instruction-following",
+    "link": "https://build.nvidia.com/ibm/granite-3_3-8b-instruct",
+    "parameters": "8b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "FLUX.1-schnell",
+    "description": "FLUX.1-schnell is a distilled image generation model, producing high quality images at fast speeds",
+    "link": "https://build.nvidia.com/black-forest-labs/flux_1-schnell",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "eurollm-9b-instruct",
+    "description": "State-of-the-art, multilingual model tailored to all 24 official European Union languages.",
+    "link": "https://build.nvidia.com/utter-project/eurollm-9b-instruct",
+    "parameters": "9b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "gemma-2-9b-cpt-sahabatai-instruct",
+    "description": "SOTA LLM pre-trained for instruction following and proficiency in Indonesian language and its dialects.",
+    "link": "https://build.nvidia.com/gotocompany/gemma-2-9b-cpt-sahabatai-instruct",
+    "parameters": "9b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "mistral-small-3.1-24b-instruct-2503",
+    "description": "Efficient multimodal model excelling at multilingual tasks, image understanding, and fast-responses",
+    "link": "https://build.nvidia.com/mistralai/mistral-small-3_1-24b-instruct-2503",
+    "parameters": "24b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "name": "mistral-medium-3-instruct",
+    "description": "Powerful, multimodal language model designed for enterprise applications, including software development, data analysis, and reasoning.",
+    "link": "https://build.nvidia.com/mistralai/mistral-medium-3-instruct",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "parakeet-1.1b-rnnt-multilingual-asr",
+    "description": "High accuracy and optimized performance for transcription in 25 languages",
+    "link": "https://build.nvidia.com/nvidia/parakeet-1_1b-rnnt-multilingual-asr",
+    "parameters": "1.1b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "audio"
+    ]
+  },
+  {
+    "name": "FLUX.1-dev",
+    "description": "FLUX.1 is a state-of-the-art suite of image generation models",
+    "link": "https://build.nvidia.com/black-forest-labs/flux_1-dev",
+    "parameters": "Unknown",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "image"
+    ]
+  },
+  {
+    "name": "llama-3.1-nemotron-ultra-253b-v1",
+    "description": "Superior inference efficiency with highest accuracy for scientific and complex math reasoning, coding, tool calling, and instruction following.",
+    "link": "https://build.nvidia.com/nvidia/llama-3_1-nemotron-ultra-253b-v1",
+    "parameters": "253b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-4-maverick-17b-128e-instruct",
+    "description": "A general purpose multimodal, multilingual 128 MoE model with 17B parameters.",
+    "link": "https://build.nvidia.com/meta/llama-4-maverick-17b-128e-instruct",
+    "parameters": "17B parameters",
+    "context_length": "128 M",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "llama-4-scout-17b-16e-instruct",
+    "description": "A multimodal, multilingual 16 MoE model with 17B parameters.",
+    "link": "https://build.nvidia.com/meta/llama-4-scout-17b-16e-instruct",
+    "parameters": "17B parameters",
+    "context_length": "16 M",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "name": "qwq-32b",
+    "description": "Powerful reasoning model capable of thinking and reasoning, can achieve significantly enhanced performance in downstream tasks, especially hard problems.",
+    "link": "https://build.nvidia.com/qwen/qwq-32b",
+    "parameters": "32b",
+    "context_length": "Unknown",
+    "source": "NVIDIA",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "google/gemma-4-26b-a4b-it:free",
+    "name": "Google: Gemma 4 26B A4B  (free)",
+    "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual...",
+    "parameters": "26b",
+    "context_length": "262K",
+    "context_raw": 262144,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "google/gemma-4-31b-it:free",
+    "name": "Google: Gemma 4 31B (free)",
+    "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat...",
+    "parameters": "31b",
+    "context_length": "262K",
+    "context_raw": 262144,
+    "source": "OpenRouter",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "id": "google/lyria-3-pro-preview",
+    "name": "Google: Lyria 3 Pro Preview",
+    "description": "Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz...",
+    "parameters": "Unknown",
+    "context_length": "1.0M",
+    "context_raw": 1048576,
+    "source": "OpenRouter",
+    "modalities": [
+      "audio"
+    ]
+  },
+  {
+    "id": "google/lyria-3-clip-preview",
+    "name": "Google: Lyria 3 Clip Preview",
+    "description": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate...",
+    "parameters": "Unknown",
+    "context_length": "1.0M",
+    "context_raw": 1048576,
+    "source": "OpenRouter",
+    "modalities": [
+      "audio",
+      "image"
+    ]
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b:free",
+    "name": "NVIDIA: Nemotron 3 Super (free)",
+    "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mam...",
+    "parameters": "120b",
+    "context_length": "262K",
+    "context_raw": 262144,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "minimax/minimax-m2.5:free",
+    "name": "MiniMax: MiniMax M2.5 (free)",
+    "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise o...",
+    "parameters": "2.5 b",
+    "context_length": "197K",
+    "context_raw": 196608,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "openrouter/free",
+    "name": "Free Models Router",
+    "description": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
+    "parameters": "Unknown",
+    "context_length": "200K",
+    "context_raw": 200000,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "arcee-ai/trinity-large-preview:free",
+    "name": "Arcee AI: Trinity Large Preview (free)",
+    "description": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing....",
+    "parameters": "400B",
+    "context_length": "131K",
+    "context_raw": 131000,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "liquid/lfm-2.5-1.2b-thinking:free",
+    "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+    "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K...",
+    "parameters": "1.2b",
+    "context_length": "33K",
+    "context_raw": 32768,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "liquid/lfm-2.5-1.2b-instruct:free",
+    "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+    "description": "LFM2.5-1.2B-Instruct is a compact, high-performance instruction-tuned model built for fast on-device AI. It delivers strong chat quality in a 1.2B parameter footprint, with efficient edge inference an...",
+    "parameters": "1.2b",
+    "context_length": "33K",
+    "context_raw": 32768,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
+    "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems. The model is fully...",
+    "parameters": "30b",
+    "context_length": "256K",
+    "context_raw": 256000,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "arcee-ai/trinity-mini:free",
+    "name": "Arcee AI: Trinity Mini (free)",
+    "description": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with ro...",
+    "parameters": "26B",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
+    "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, c...",
+    "parameters": "12b",
+    "context_length": "128K",
+    "context_raw": 128000,
+    "source": "OpenRouter",
+    "modalities": [
+      "video",
+      "text"
+    ]
+  },
+  {
+    "id": "qwen/qwen3-next-80b-a3b-instruct:free",
+    "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
+    "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code ...",
+    "parameters": "80b",
+    "context_length": "262K",
+    "context_raw": 262144,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "nvidia/nemotron-nano-9b-v2:free",
+    "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
+    "description": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and.....",
+    "parameters": "9b",
+    "context_length": "128K",
+    "context_raw": 128000,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "openai/gpt-oss-120b:free",
+    "name": "OpenAI: gpt-oss-120b (free)",
+    "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B par...",
+    "parameters": "120b",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "openai/gpt-oss-20b:free",
+    "name": "OpenAI: gpt-oss-20b (free)",
+    "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimiz...",
+    "parameters": "20b",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "z-ai/glm-4.5-air:free",
+    "name": "Z.ai: GLM 4.5 Air (free)",
+    "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but wit...",
+    "parameters": "Unknown",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "qwen/qwen3-coder:free",
+    "name": "Qwen: Qwen3 Coder 480B A35B (free)",
+    "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-con...",
+    "parameters": "480B",
+    "context_length": "262K",
+    "context_raw": 262000,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+    "name": "Venice: Uncensored (free)",
+    "description": "Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant of Mistral-Small-24B-Instruct-2501, developed by dphn.ai in collaboration with Venice.ai. This model is designed as an “unc...",
+    "parameters": "24b",
+    "context_length": "33K",
+    "context_raw": 32768,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "google/gemma-3n-e2b-it:free",
+    "name": "Google: Gemma 3n 2B (free)",
+    "description": "Gemma 3n E2B IT is a multimodal, instruction-tuned model developed by Google DeepMind, designed to operate efficiently at an effective parameter size of 2B while leveraging a 6B architecture. Based...",
+    "parameters": "2b",
+    "context_length": "8K",
+    "context_raw": 8192,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "google/gemma-3n-e4b-it:free",
+    "name": "Google: Gemma 3n 4B (free)",
+    "description": "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resource devices, such as phones, laptops, and tablets. It supports multimodal inputs—including text, visual data, and audio—enab...",
+    "parameters": "4b",
+    "context_length": "8K",
+    "context_raw": 8192,
+    "source": "OpenRouter",
+    "modalities": [
+      "audio",
+      "image"
+    ]
+  },
+  {
+    "id": "google/gemma-3-4b-it:free",
+    "name": "Google: Gemma 3 4B (free)",
+    "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, ...",
+    "parameters": "4b",
+    "context_length": "33K",
+    "context_raw": 32768,
+    "source": "OpenRouter",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "id": "google/gemma-3-12b-it:free",
+    "name": "Google: Gemma 3 12B (free)",
+    "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, ...",
+    "parameters": "12b",
+    "context_length": "33K",
+    "context_raw": 32768,
+    "source": "OpenRouter",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "id": "google/gemma-3-27b-it:free",
+    "name": "Google: Gemma 3 27B (free)",
+    "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, ...",
+    "parameters": "27b",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "image",
+      "text"
+    ]
+  },
+  {
+    "id": "meta-llama/llama-3.3-70b-instruct:free",
+    "name": "Meta: Llama 3.3 70B Instruct (free)",
+    "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
+    "parameters": "70b",
+    "context_length": "66K",
+    "context_raw": 65536,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "meta-llama/llama-3.2-3b-instruct:free",
+    "name": "Meta: Llama 3.2 3B Instruct (free)",
+    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with ...",
+    "parameters": "3b",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "nousresearch/hermes-3-llama-3.1-405b:free",
+    "name": "Nous: Hermes 3 405B Instruct (free)",
+    "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coheren...",
+    "parameters": "405b",
+    "context_length": "131K",
+    "context_raw": 131072,
+    "source": "OpenRouter",
+    "modalities": [
+      "text"
+    ]
+  }
+]
