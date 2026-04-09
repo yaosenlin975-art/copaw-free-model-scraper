@@ -1,5 +1,5 @@
 ---
-name: free-model-scraper
+name: copaw-free-model-scraper
 description: >
   从 NVIDIA 和 OpenRouter 爬取免费 AI 模型信息，获取模型参数大小、上下文长度和用途分类，
   通过邮件发送汇总报告，并更新本地 CoPaw 配置文件。支持对比变更检测和失效模型清理。
